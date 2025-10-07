@@ -1,126 +1,120 @@
+This repository contains the front-end application for the Biobank project, built with Nuxt 2 (Vue 2) and Vuetify. This English README mirrors the main Chinese README and provides setup instructions, scripts, project structure, lint/test guidance, and common troubleshooting tips.
 
-# BioBank
+```
+The project also uses `lint-staged` to lint staged files on commit.
 
-## 啟動方式
+## Quick links
 
-### 環境需求
-- Node.js: 16.20.1
+- Main entry: `pages/index.vue`
+- Nuxt config: `nuxt.config.js`
+- Package manifest: `package.json`
 
-### 安裝與啟動
+## Requirements
 
-```bash
-# 安裝依賴
-yarn install
+- Node.js: recommended v16.x (project recorded version: 16.20.1)
+- Yarn: recommended (examples below use `yarn`)
 
-# 啟動開發伺服器
-# BioBank (biobankfrontend-demo)
+## Install & Run (local development)
 
-本專案為 Biobank 前端介面（基於 Nuxt 2 + Vue 2 + Vuetify）。此 README 取代原本的簡短說明，補充專案結構、啟動、建置、檢查與常見問題排解。
-
-## 主要特色
-
-- 使用 Nuxt 2（支援 SSR 與靜態產生）
-- Vuetify 作為 UI 元件庫
-- Vuex 管理應用狀態（使用 `vuex-pathify` 與 `vuex-persist`）
-- 富文本與圖表支援（CKEditor、ApexCharts）
-
-## 環境需求
-
-- Node.js：建議使用 v16.x（專案紀錄為 16.20.1）
-- 套件管理器：yarn（可用 npm，但 README 範例以 yarn 為主）
-
-## 快速開始
-
-在專案根目錄執行：
+1. Install dependencies:
 
 ```powershell
-# 安裝相依套件
 yarn install
+```
 
-# 啟動開發伺服器（使用 .env.dev，埠號 8000）
+2. Start dev server (uses `.env.dev` by default via scripts):
+
+```powershell
 yarn dev
 ```
 
-開發伺服器預期在 http://localhost:8000 運行（視 `.env` 設定而定）。
+The dev server is expected to run at `http://localhost:8000` unless overridden by env settings.
 
-## 常用 scripts
+## Build & Production
 
-（下列 script 來自 `package.json`）
-
-- `yarn dev`：啟動開發伺服器（`--dotenv .env.dev`，port 8000）
-- `yarn build`：建置（`--dotenv .env.dev`）
-- `yarn start`：啟動已建置的生產伺服器
-- `yarn generate`：靜態產生（`--dotenv .env.dev`）
-- `yarn generate:staging`：靜態產生（`--dotenv .env.staging`）
-- `yarn generate:prod`：靜態產生（`--dotenv .env.prod`）
-- `yarn lint:js`：執行 ESLint（檢查 `.js`、`.vue`）
-- `yarn lint:style`：執行 Stylelint（檢查 `.vue`、`.css`）
-- `yarn lint`：同時執行 JS 與 style lint
-- `yarn lint:all`：更完整的 eslint 檢查並嘗試自動修復
-- `yarn cypress:dev`：開啟 Cypress 測試 UI
-
-開發流程通常為 `yarn install` -> `yarn dev`。
-
-## 主要相依套件（節錄）
-
-- `nuxt`（v2.x）
-- `vuetify`
-- `vuex`, `vuex-pathify`, `vuex-persist`
-- `@ckeditor/ckeditor5-vue2` 與多個 CKEditor builds
-- `apexcharts`, `vue-apexcharts`
-
-完整相依請見 `package.json`。
-
-## 專案目錄重點
-
-- `app/`：Nuxt 應用相關（assets、scss、router）
-- `components/`：Vue 元件（含 base 與共用元件）
-- `layouts/`：Nuxt 版面配置
-- `pages/`：Nuxt 路由頁面（自動路由）
-- `plugins/`：Nuxt 插件（axios、route-guard 等）
-- `store/`：Vuex 狀態管理
-- `static/`：靜態檔案
-- `data/`：靜態或範例資料（如 consent.json）
-- `util/`：工具函式（api 定義、auth、helpers）
-
-## 環境變數
-
-本項目在 `package.json` 的指令中使用 `--dotenv .env.*` 讀取不同環境設定（`.env.dev`、`.env.staging`、`.env.prod`）。若專案中沒有提供範本，請向原作者或團隊索取 `.env` 範本。
-
-## Lint / 格式化
-
-專案已設定 ESLint 與 Stylelint。常用指令：
+- Build for production:
 
 ```powershell
-yarn lint
-# 或分別
+yarn build
+```
+
+- Start the built server:
+
+```powershell
+yarn start
+```
+
+- Generate static site:
+
+```powershell
+yarn generate            # uses .env.dev
+yarn generate:staging    # uses .env.staging
+yarn generate:prod       # uses .env.prod
+```
+
+## Linting & Tests
+
+- Run lint checks:
+
+```powershell
 yarn lint:js
 yarn lint:style
+yarn lint
+yarn lint:all
 ```
 
-專案也使用 `lint-staged`，可在 commit 階段檢查 staged 檔案。
+- Open Cypress for E2E tests:
 
-## 測試
-
-- E2E：Cypress（`yarn cypress:dev` 打開 GUI）
-
-## 常見問題與排解建議
-
-- 安裝失敗：確認 Node 版本（建議 16.x）、yarn 版本，以及公司網路/代理設定。
-- Nuxt 啟動異常：檢查 `.env.*` 是否缺少必要值；也可暫時移除 `--dotenv` 嘗試定位錯誤。
-- 樣式或資源問題：執行 `yarn build` 檢查錯誤輸出。
-
-## 進階與貢獻
-
-- 若要提交 PR，請先確保 lint 通過且變更具說明性。
-
----
-
-如果你需要：
-- 英文版 README（我可以產生 `README_EN.md`）
-- 更簡潔的快速入門版（直接列必要命令）
-
-請告訴我偏好，我會再更新檔案。
+```powershell
+yarn cypress:dev
 ```
 
-開發伺服器將在 http://localhost:8000 啟動
+## Notes on important folders
+
+- `assets/` contains SASS partials and images. Developers should import SASS variables and main partials via the Nuxt build pipeline.
+- `components/` holds Vue components used across pages; `components/base/` contains generic UI components (buttons, cards, pagination).
+- `pages/` is where Nuxt auto-generates routes. See `pages/myConsent/*` for nested routes that include dynamic params (e.g. `_id`).
+- `plugins/` registers client or universal plugins (e.g. axios and route guards). Files ending in `.client.js` are client-only.
+- `store/` includes Vuex; this project uses `vuex-pathify` and `vuex-persist` to simplify state patterns and persistence.
+
+## Components
+
+Below are descriptions of key components found in `components/` and `components/base/`. These are the building blocks used across pages in this project.
+
+- `ConsentTable.vue` (`components/ConsentTable.vue`)
+	- Purpose: display a list/table of consent records using `v-data-table`.
+	- Important props: `headerList` (Array), `bodyList` (Array), `loading` (Boolean), `btnName` (String), `btnColor` (String).
+	- Notes: Renders each row with a long action button (`BtnLong`) to view the consent detail/proof route (example navigates to `/myConsent/prove/original`).
+
+- `ConsentTemplate.vue` (`components/ConsentTemplate.vue`)
+	- Purpose: render the detailed consent form content (validity section, questions, descriptions) and provide validation rules and controls for checkboxes/radios/fill-in answers.
+	- Important props: `consentData` (Object, required), `isDisabled` (Boolean), `backgroundColor` (String).
+	- Behavior: uses `v-dompurify-html` to safely render rich text, includes rules for required fields, and methods for resetting selections and normalizing textarea-to-HTML conversions.
+	- Notes: This is central to both viewing and filling consent forms; it supports single/multiple choice, true/false, and free-text input types.
+
+- `QuestionnaireTemplate.vue` (`components/QuestionnaireTemplate.vue`)
+	- Purpose: render multi-page questionnaires with groups and subgroups, support for many UI types (fill-in, single, multiple, select, doubleSelect) and dynamic show/hide logic.
+	- Important props: `questionnaireData` (Object, required), `isDisabled` (Boolean).
+	- Behavior: handles pagination (group/subgroup), option-dependent jumps (show/hide other questions), repels (mutually exclusive options), and emits `upDateGroups` when data changes.
+	- Notes: Uses `Pagination` base component for navigation between groups and subgroups.
+
+- `AuthDialog.vue` (`components/AuthDialog.vue`)
+	- Purpose: small modal dialog for account/auth related messages.
+	- Important props: `dialogVisible` (Boolean), `title` (String), `content` (String), `accountError` (String).
+	- Emits: `dialogClose` when the dialog is closed.
+
+- `Captcha.vue` (`components/Captcha.vue`)
+	- Purpose: renders a canvas-based numeric captcha and emits the generated code via `getCaptchaCode` event.
+	- Notes: used in auth flows where a verification image is needed; draws 6 numeric characters and some noise.
+
+- Base UI components (`components/base/`)
+	- `Btn.vue` — lightweight wrapper around Vuetify `v-btn` with props for `color`, `btnName`, `width`, `textColor`.
+	- `BtnLong.vue`, `BtnNormal.vue`, `Card.vue`, `Pagination.vue` — commonly used UI atoms across pages (pagination is used by questionnaire templates).
+
+These components are designed to be reusable. When editing form logic, prefer updating the template components (`ConsentTemplate*`, `QuestionnaireTemplate`) since they contain the validation and show/hide behaviors.
+
+## How components and pages interact (notes)
+
+- `pages/myConsent/*` pages load consent data (here demo content from `data/consent.json`) and pass it into `ConsentTemplate`/`ConsentTemplate2`. The consent template handles rendering the structure (validity, questions, descriptions) and validating user input.
+- `QuestionnaireTemplate` is used where survey/questionnaire logic is needed; it contains advanced behavior like jump logic (`handleJump`), mutual exclusion (`handleRepels`), and pagination across groups and subgroups.
+- Many components rely on plugins and store state: `plugins/` contains `axios.js`, `route-guard.js`, `vue-dompurify-html.js`, `vuex-pathify.js`, and `vuex-persist.js` which should be consulted when changing global behavior (auth, API calls, rich-text rendering, store persistence).
