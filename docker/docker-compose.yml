@@ -1,0 +1,30 @@
+
+# Multi-service Docker Compose configuration
+# This file launches both web/frontend and web/manage services simultaneously
+
+version: '3.8'
+services:
+
+  frontend:
+    build: ../web/frontend
+    working_dir: /app
+    ports:
+      - "8000:8000"
+    environment:
+      - HOST=0.0.0.0
+    command: yarn dev
+    volumes:
+      - ../web/frontend:/app
+    restart: unless-stopped
+
+  manage:
+    build: ../web/manage
+    working_dir: /app
+    ports:
+      - "8081:8081"
+    environment:
+      - HOST=0.0.0.0
+    command: npm run serve
+    volumes:
+      - ../web/manage:/app
+    restart: unless-stopped
