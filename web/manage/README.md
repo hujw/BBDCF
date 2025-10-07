@@ -1,7 +1,4 @@
-yarn install
-yarn serve:dev
-
-# BioBank Consent Management System
+# Consent Management System
 
 ## Getting Started
 
