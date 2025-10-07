@@ -28,7 +28,6 @@ BBCDF/
 │   ├── frontend/  # Nuxt.js (Vue) user portal
 │   └── manage/    # Vue.js admin portal
 ├── docs/          # Documentation
-├── plan3.md       # Restructuring plan (AEnet style)
 └── README.md      # Project introduction
 ```
 
