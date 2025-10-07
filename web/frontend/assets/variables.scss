@@ -1,0 +1,9 @@
+// Ref: https://github.com/nuxt-community/vuetify-module#customvariables
+//
+// The variables you want to modify
+
+// 注意 字體要到config裡用@nuxtjs/google-fonts設置 千萬不要用下面的方式設置 會造成記憶體大量使用 蘋果系統會跳掉
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+// DINCond
+// $body-font-family: 'Noto Sans TC', 'Open Sans';
+$body-font-family: 'Noto Sans TC';

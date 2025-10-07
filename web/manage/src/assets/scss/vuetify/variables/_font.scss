@@ -1,0 +1,135 @@
+$body-font-family: "Noto Sans TC";
+$font-size-root: 15px;
+$line-height-root: 1.5;
+
+$font-weights: (
+  "thin": 300,
+  "light": 300,
+  "regular": 400,
+  "medium": 500,
+  "bold": 600,
+  "black": 700
+);
+
+$heading-font-family: $body-font-family;
+
+$headings: (
+  "h6": (
+    "size": 1.16rem,
+    "weight": 800,
+    "line-height": 2rem,
+    "letter-spacing": 0.0125em,
+    "font-family": $heading-font-family
+  ),
+  "subtitle-1": (
+    "size": 1rem,
+    "weight": 600,
+    "line-height": 1.75rem,
+    "letter-spacing": 0.009375em,
+    "font-family": $body-font-family
+  ),
+  "caption": (
+    "size": 0.75rem,
+    "weight": 400,
+    "letter-spacing": 0.0333333333em,
+    "line-height": 1.25rem,
+    "font-family": $body-font-family
+  ),
+  "overline": (
+    "size": 0.625rem,
+    "weight": 400,
+    "letter-spacing": 0.1666666667em,
+    "line-height": 1rem,
+    "font-family": $body-font-family
+  )
+);
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+h2 {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+$max: 100;
+
+@for $i from 10 through $max {
+  .text-#{$i} {
+    font-size: $i + px !important;
+  }
+  .line-height-#{$i} {
+    line-height: $i + px !important;
+  }
+}
+
+.text-sm {
+  font-size: 12px;
+}
+// .text-10 {
+//   font-size: 10px !important;
+// }
+// .text-11 {
+//   font-size: 11px !important;
+// }
+// .text-12 {
+//   font-size: 12px !important;
+// }
+// .text-14 {
+//   font-size: 14px;
+// }
+// .text-16 {
+//   font-size: 16px;
+// }
+// .text-18 {
+//   font-size: 18px;
+// }
+// .text-20 {
+//   font-size: 20px;
+// }
+// .text-22 {
+//   font-size: 22px;
+// }
+// .text-24 {
+//   font-size: 24px;
+// }
+// .text-26 {
+//   font-size: 26px;
+// }
+// .text-28 {
+//   font-size: 28px;
+// }
+// .text-30 {
+//   font-size: 30px;
+// }
+// .text-40 {
+//   font-size: 40px;
+// }
+
+.v-application p {
+  margin-bottom: 16px;
+}
+
+.v-input--radio-group__input .v-radio .v-label {
+  color: #000;
+}
+
+.v-input.v-input--checkbox .v-label {
+  color: #000;
+}

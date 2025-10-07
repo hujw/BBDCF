@@ -1,0 +1,164 @@
+{
+    "_id" : "64cc4eb753fb78535761cb96",
+    "title" : "臺灣人體生物資料庫參與同意書",
+    "subTitle" : "一般參與者",
+    "version" : "v1.9.3",
+    "createDatetime" : "2023-08-04T01:04:55.081+0000",
+    "validity" : {
+        "label" : "一、若您同意參與臺灣人體生物資料庫(下稱資料庫)，請全部勾選下列各事項，以完備本同 意書之效力：",
+        "datas" : [
+            {
+                "index" : 1,
+                "content" : "本人已藉由說明手冊、網站、邀請函、影音媒體或其他途徑，對於資料庫之相關資訊有初步理解。",
+                "strong" : false,
+                "approved" : true
+            },
+            {
+                "index" : 2,
+                "content" : "本人在詳細聽取駐站人員上述之說明及閱讀說明手冊的資訊後，對於資料庫的採集目的、方法、風險和利益已有瞭解，相關疑問亦已獲得解答。",
+                "strong" : false,
+                "approved" : true
+            },
+            {
+                "index" : 3,
+                "content" : "本人明白並允許本人所提供之檢體（即血液、尿液、糞便）及相關資料、資訊，在未來可提供予經倫理委員會許可，進行有關臺灣本土常見疾病之生物醫學研究活動以及經倫理委員會及主管機關邀集組成之委員會審查通過之醫學研究所用。",
+                "strong" : false,
+                "approved" : true
+            },
+            {
+                "index" : 4,
+                "content" : " 本人明白參與資料庫係出於完全的自願，且亦知曉可在不需任何理由下，於任何階段要求停止提供生物檢體及相關資料、資訊；自由退出；或變更同意使用範圍。",
+                "strong" : false,
+                "approved" : true
+            },
+            {
+                "index" : 5,
+                "content" : "本人同意所提供的相關資料、資訊，將有可能經倫理委員會及其他資料庫(如健保資料庫、癌症登記資料庫、死因檔、出生通報檔及衛生福利資料統計檔等)同意，得進行加密比對，產出集體性資料，但不揭露任何個人資訊，亦不連結增加個人資訊內容。",
+                "strong" : true,
+                "approved" : true
+            },
+            {
+                "index" : 6,
+                "content" : "本人了解參與資料庫並不會因而獲得任何形式之利益。",
+                "strong" : false,
+                "approved" : true
+            },
+            {
+                "index" : 7,
+                "content" : "本人同意未來資料庫因商業運用產生之收益，由資料庫依「臺灣人體生物資料庫商業運用利益回饋作業要點」統籌執行相關回饋事宜。",
+                "strong" : false,
+                "approved" : true
+            },
+            {
+                "index" : 8,
+                "content" : "若本人有任何疑問或申訴隨時可和臺灣人體生物資料庫02-26523580或與臺灣人體生物資料庫倫理委員會 02-27883789 聯絡。",
+                "strong" : false,
+                "approved" : true
+            },
+            {
+                "index" : 9,
+                "content" : "本人明瞭資料庫現階段雖係由中央研究院依「人體生物資料庫管理條例」進行設置，未來仍有可能經主管機關審查核准後進行移轉，或經倫理委員會同意，進行必要的調整。",
+                "strong" : false,
+                "approved" : true
+            }
+        ]
+    },
+    "questions" : {
+        "label" : "二、其他重要事項：",
+        "datas" : [
+            {
+                "index" : 2,
+                "label" : "未來希望取得檢查報告：",
+                "type" : "tf",
+                "selected" : true,
+                "showDefault" : true,
+                "required" : true,
+                "revise" : false,
+                "options" : [
+                    {
+                        "index" : 1,
+                        "label" : "是",
+                        "value" : true
+                    },
+                    {
+                        "index" : 2,
+                        "label" : "否",
+                        "value" : false
+                    }
+                ]
+            },
+            {
+                "index" : 3,
+                "label" : "若未來因故喪失行為能力或死亡，是否允許資料庫繼續使用本人的檢體及相關資料、資訊：",
+                "type" : "tf",
+                "selected" : false,
+                "showDefault" : true,
+                "required" : true,
+                "revise" : false,
+                "options" : [
+                    {
+                        "index" : 1,
+                        "label" : "是",
+                        "value" : true
+                    },
+                    {
+                        "index" : 2,
+                        "label" : "否",
+                        "value" : false
+                    }
+                ]
+            },
+            {
+                "index" : 4,
+                "label" : "本人同意臺灣人體生物資料庫寄送文件時，得以 (1)電子郵件 (2)郵寄信件 方式聯繫本人。(可複選)",
+                "tips" : "",
+                "type" : "mutiple",
+                "selected" : [
+                    "1"
+                ],
+                "defaultSelected" : [
+
+                ],
+                "showDefault" : true,
+                "required" : true,
+                "revise" : true,
+                "options" : [
+                    {
+                        "index" : 1,
+                        "label" : "電子郵件",
+                        "value" : "0"
+                    },
+                    {
+                        "index" : 2,
+                        "label" : "郵寄信件",
+                        "value" : "1"
+                    }
+                ]
+            },
+            {
+                "index" : 5,
+                "label" : "若有發現醫學上確認且涉及對您的健康風險產生重大意義資訊時，將詢問您是否願意接收到此資訊。告知方式將以電話、書面或您同意之實體或電子傳輸等非實體方式通知您本人：",
+                "type" : "tf",
+                "selected" : false,
+                "showDefault" : true,
+                "required" : true,
+                "revise" : false,
+                "options" : [
+                    {
+                        "index" : 1,
+                        "label" : "是",
+                        "value" : true
+                    },
+                    {
+                        "index" : 2,
+                        "label" : "否",
+                        "value" : false
+                    }
+                ]
+            }
+        ]
+    },
+    "crUser" : "af64f033-71ce-428b-bbba-2285a275a521",
+    "originalConsentId" : "e974226a-1b6f-4e69-9659-1f071bb850a2",
+    "deleted" : false
+}
