@@ -23,12 +23,14 @@ Biobank Demo leverages blockchain-based dynamic consent and modern web technolog
 ## Directory Structure
 
 ```
-BBCDF/
-├── web/
-│   ├── frontend/  # Nuxt.js (Vue) user portal
-│   └── manage/    # Vue.js admin portal
-├── docs/          # Documentation
-└── README.md      # Project introduction
+biobank-demo/
+├── docker/                 # Docker configuration (docker-compose.yml)
+├── docs/                   # Project documentation (e.g., manuals, guides)
+├── web/                    # Main web application modules
+│   ├── frontend/           # User portal (Nuxt.js, Vue 2)
+│   └── manage/             # Admin portal (Vue.js)
+├── LICENSE                 # Apache License 2.0
+└── README.md               # Project introduction and instructions
 ```
 
 ---
@@ -81,5 +83,3 @@ yarn serve
 	- hujw (jenweihu@gmail.com)
 
 ---
-
-For questions or further documentation, see the individual module READMEs or contact the project maintainers.
